@@ -8,7 +8,7 @@ RUN setcap cap_net_raw+eip $(eval readlink -f $(which node))
 
 WORKDIR /
 
-COPY /kaniko/buildcontext /app
+COPY / /app
 RUN rm -rf /app/node_modules
 
 RUN cd /app && npm i
