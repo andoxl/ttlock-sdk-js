@@ -8,9 +8,9 @@ RUN setcap cap_net_raw+eip $(eval readlink -f $(which node))
 
 WORKDIR /
 RUN pwd
-RUN ls -l
+RUN ls -l /kaniko
 
-COPY ttlock-sdk-js /app
+COPY * /app
 RUN rm -rf /app/node_modules
 
 RUN cd /app && npm i
