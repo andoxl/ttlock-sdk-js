@@ -10,3 +10,5 @@ echo Starting dbus
 
 echo Starting bluetooth
 ./bluetooth start
+
+cd /app/examples
